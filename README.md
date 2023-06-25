@@ -21,4 +21,4 @@ Alterar no arquivo "Tradutor.java" a seguinte linha: <br />
 
 
 ### Auto-Loot module
-![Gif animado da demonstração do auto loot](https://cdn.discordapp.com/attachments/1122605734115410144/1122663908851847198/tccg.gif)
+![](https://github.com/P15c1n4/PWN3-Proxy/assets/93447442/f776feb5-b496-4b91-8bd1-a0b8cfca9267)
