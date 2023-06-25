@@ -18,3 +18,7 @@ Alterar no arquivo "Tradutor.java" a seguinte linha: <br />
 
 ### Proxy
 ![imagem do proxy em uso](https://cdn.discordapp.com/attachments/1122605734115410144/1122645190922993694/Screenshot_1.png)
+
+
+### Auto-Loot module
+![Gif animado da demonstração do auto loot](https://cdn.discordapp.com/attachments/1122605734115410144/1122663908851847198/tccg.gif)
