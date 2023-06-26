@@ -23,4 +23,5 @@ Alterar no arquivo "Tradutor.java" a seguinte linha: <br />
 
 
 ### Auto-Loot module
-![](https://github.com/P15c1n4/PWN3-Proxy/assets/93447442/f776feb5-b496-4b91-8bd1-a0b8cfca9267)
+![](https://github.com/P15c1n4/PWN3-Proxy/assets/93447442/19667031-8e2e-42d4-8c45-f40cf8bb50a1)
+
