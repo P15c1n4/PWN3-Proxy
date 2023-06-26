@@ -16,7 +16,8 @@ Alterar no arquivo "Tradutor.java" a seguinte linha: <br />
 `if(!inputSocket.getInetAddress().getHostAddress().equals("!IP DO SEU SERVIDOR!")){`
 
 
-**ATENÇÃO!** >As classes "Tradutor.java" e "AutoInject.java" devem ficar na mesma pasta do arquivo .jar já compilado, pois elas são compiladas em tempo de execução, permitindo alterações durante o uso.
+**ATENÇÃO!**  
+>As classes "Tradutor.java" e "AutoInject.java" devem ficar na mesma pasta do arquivo .jar já compilado, pois elas são compiladas em tempo de execução, permitindo alterações durante o uso.
 
 ### Proxy
 ![imagem do proxy em uso](https://cdn.discordapp.com/attachments/1122605734115410144/1122645190922993694/Screenshot_1.png)
