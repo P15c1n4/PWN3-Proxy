@@ -1,0 +1,4 @@
+proxy\ForwardingServer.class
+proxy\ForwardingServer$ForwardingConnection.class
+proxy\ForwardingServer$WorkerComand.class
+proxy\ForwardingServer$ForwardingThread.class
