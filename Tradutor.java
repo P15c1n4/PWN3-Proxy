@@ -24,7 +24,7 @@ public class Tradutor {
        
        //controle para sabe origen do pacote
        //142.44.191.189
-       if(!inputSocket.getInetAddress().getHostAddress().equals("142.44.191.189")){
+       if(!inputSocket.getInetAddress().getHostAddress().equals("192.168.15.202")){
            isClient = true;
        }
        //Identificação do pacote
@@ -178,7 +178,7 @@ public class Tradutor {
                 //Pacote de Respawn    
                 case "7273":
                     
-                    return "\n"+TradutorS_Respawn(Hex);
+                    return Hex;//"\n"+TradutorS_Respawn(Hex);
                 
                     
                 //Pacote de skill Mobs(7472)

@@ -23,7 +23,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>ForwardingServer</mainClass>
+                            <mainClass>proxy.ForwardingServer</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

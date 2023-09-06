@@ -15,7 +15,6 @@ import java.net.URLClassLoader;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HexFormat;
-import java.util.Scanner;
 import javax.tools.JavaCompiler;
 import javax.tools.ToolProvider;
 
@@ -51,17 +50,15 @@ static ArrayList<String> fila = new ArrayList();
                 forwardingThread.start();  
             }
             
-            WorkerComand workerComand = new WorkerComand();
-            workerComand.start();
-            
         }
-
+            Command command = new Command(fila);
+            command.start();
     }
 
     private static class ForwardingThread extends Thread {
         private int listeningPort;
         private int forwardingPort;
-        private static String SERVER_IP = "142.44.191.189";
+        private static String SERVER_IP = "127.0.0.1";
 
         public ForwardingThread(int listeningPort, int forwardingPort, String arg1) {
             this.listeningPort = listeningPort;
@@ -143,17 +140,18 @@ static ArrayList<String> fila = new ArrayList();
                             if(result.length() > 0){
                                 System.out.println("\nServer --> "+result);
                             }
-                            
-                            for(int i = 0; i < fila.size(); i++){
-                                String[] split = fila.get(i).split(" ");
-                                
-                                if(split[0].equals("S_")){
-                                   
-                                   byte[] bytes = HexFormat.of().parseHex(split[1]);
-                                   int bytesTotal = bytes.length;
-                                   
-                                   outputStream.write(bytes, 0, bytesTotal);
-                                   fila.remove(i);
+                            if(!fila.isEmpty()){ 
+                                for(int i = 0; i < fila.size(); i++){
+                                    String[] split = fila.get(i).split(" ");
+
+                                    if(split.length > 1 && split[0].equals("S_")){
+
+                                       byte[] bytes = HexFormat.of().parseHex(split[1]);
+                                       int bytesTotal = bytes.length;
+
+                                       outputStream.write(bytes, 0, bytesTotal);
+                                       fila.  remove(i);
+                                    }
                                 }
                             }
                         }catch(Exception e){
@@ -166,17 +164,18 @@ static ArrayList<String> fila = new ArrayList();
                             if(result.length() > 0){
                                 System.out.println("\nClient --> "+result);
                             }
-                            
-                            for(int i = 0; i < fila.size(); i++){
-                                String[] split = fila.get(i).split(" ");
-                                
-                                if(split[0].equals("C_")){
-                                   
-                                   byte[] bytes = HexFormat.of().parseHex(split[1]);
-                                   int bytesTotal = bytes.length;
-                                   
-                                   outputStream.write(bytes, 0, bytesTotal);
-                                   fila.remove(i);
+                            if(!fila.isEmpty()){ 
+                                for(int i = 0; i < fila.size(); i++){
+                                    String[] split = fila.get(i).split(" ");
+
+                                    if(split.length > 1 && split[0].equals("C_")){
+
+                                       byte[] bytes = HexFormat.of().parseHex(split[1]);
+                                       int bytesTotal = bytes.length;
+
+                                       outputStream.write(bytes, 0, bytesTotal);
+                                       fila.remove(i);
+                                    }
                                 }
                             }
                         }catch(Exception e){
@@ -277,20 +276,4 @@ static ArrayList<String> fila = new ArrayList();
 
            return sb.toString().trim();
        }
-    private static class WorkerComand extends Thread{
-    
-        @Override
-        public void run() {
-            while (true){
-                Scanner scanner = new Scanner(System.in);
-                String comando = scanner.nextLine();
-
-                String[] valida = comando.split(" ");
-                if(valida.length == 2 && (valida[0].equals("C_") || valida[0].equals("S_"))){
-                    fila.add(comando);
-                }
-            }
-        }
-        
-    }
 }
