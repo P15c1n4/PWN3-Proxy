@@ -1,8 +1,8 @@
 # PWN3-Proxy
 
-## Proxy implementado usando engenharia reversa par mapear pacotes trafegados entre Cliente e Servidor do jogo PWN Adventure3.
+## Proxy implementado usando engenharia reversa par mapear pacotes trafegados entre Cliente e Servidor no jogo PWN Adventure3.
 
->Este proxy é uma implementação em java 17 para maper os pacotes trafegados via rede, com proposito de reconstruir parte do servidor como prova de conceito para o TCC UNIP - 2023.
+>Este proxy é uma implementação rápida e simples em java 17 para maper os pacotes trafegados via rede com proposito de reconstruir parte do servidor como prova de conceito para o TCC UNIP.
 
 <br />
 
